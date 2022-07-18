@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>No Name (add projectName to cucumber-reporting.properties)</td>
+      <td>11 Jul 2022, 13:05</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">com.cydeo.step_definitions.EatingCucumber.he_eats_some_cucumbers()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cydeo.step_definitions.EatingCucumber.he_will_be_full()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cydeo.step_definitions.EatingCucumber.john_is_hungry()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cydeo.step_definitions.GoogleSearch.userSeesIsInTheGoogleTitle(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="16954100">0.016</td>
+              <td class="duration" data-value="16954100">0.016</td>
+              <td class="duration" data-value="16954100">0.016</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cydeo.step_definitions.GoogleSearch.userTypesInTheGoogleSearchBoxAndClicksEnter(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1275502000">1.275</td>
+              <td class="duration" data-value="1275502000">1.275</td>
+              <td class="duration" data-value="1275502000">1.275</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cydeo.step_definitions.GoogleSearch.user_is_on_google_search_page()</td>
+              <td>8</td>
+              <td class="duration" data-value="1044311075">1.044</td>
+              <td class="duration" data-value="1044311075">3.245</td>
+              <td class="duration" data-value="8354488600">8.354</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cydeo.step_definitions.GoogleSearch.user_searches_for_capital(java.lang.String)</td>
+              <td>5</td>
+              <td class="duration" data-value="1864956540">1.864</td>
+              <td class="duration" data-value="1864956540">2.314</td>
+              <td class="duration" data-value="9324782700">9.324</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cydeo.step_definitions.GoogleSearch.user_sees_apple_google_search_is_in_the_google_title()</td>
+              <td>1</td>
+              <td class="duration" data-value="32912800">0.032</td>
+              <td class="duration" data-value="32912800">0.032</td>
+              <td class="duration" data-value="32912800">0.032</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cydeo.step_definitions.GoogleSearch.user_should_be_able_to_search_for_following(java.util.List&lt;java.lang.String&gt;)</td>
+              <td>1</td>
+              <td class="duration" data-value="9536445100">9.536</td>
+              <td class="duration" data-value="9536445100">9.536</td>
+              <td class="duration" data-value="9536445100">9.536</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cydeo.step_definitions.GoogleSearch.user_should_see_in_the_result(java.lang.String)</td>
+              <td>5</td>
+              <td class="duration" data-value="397580">0.000</td>
+              <td class="duration" data-value="397580">0.000</td>
+              <td class="duration" data-value="1987900">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cydeo.step_definitions.GoogleSearch.user_types_apple_in_the_google_search_box_and_clicks_enter()</td>
+              <td>1</td>
+              <td class="duration" data-value="2255909400">2.255</td>
+              <td class="duration" data-value="2255909400">2.255</td>
+              <td class="duration" data-value="2255909400">2.255</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cydeo.step_definitions.Hooks.setUp()</td>
+              <td>28</td>
+              <td class="duration" data-value="392203">0.000</td>
+              <td class="duration" data-value="392203">0.006</td>
+              <td class="duration" data-value="10981700">0.010</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cydeo.step_definitions.Hooks.tearDown(io.cucumber.java.Scenario)</td>
+              <td>28</td>
+              <td class="duration" data-value="433854375">0.433</td>
+              <td class="duration" data-value="433854375">1.070</td>
+              <td class="duration" data-value="12147922500">12.147</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cydeo.step_definitions.Login_StepDefinitions.userEnterAdminUsername()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cydeo.step_definitions.Login_StepDefinitions.userEntersAdminPassword()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cydeo.step_definitions.Login_StepDefinitions.user_enter_librarian_username()</td>
+              <td>1</td>
+              <td class="duration" data-value="3988600">0.003</td>
+              <td class="duration" data-value="3988600">0.003</td>
+              <td class="duration" data-value="3988600">0.003</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cydeo.step_definitions.Login_StepDefinitions.user_enter_student_username()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cydeo.step_definitions.Login_StepDefinitions.user_enters_librarian_password()</td>
+              <td>1</td>
+              <td class="duration" data-value="997500">0.000</td>
+              <td class="duration" data-value="997500">0.000</td>
+              <td class="duration" data-value="997500">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cydeo.step_definitions.Login_StepDefinitions.user_enters_student_password()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cydeo.step_definitions.Login_StepDefinitions.user_is_on_the_library_login_page()</td>
+              <td>3</td>
+              <td class="duration" data-value="1663033">0.001</td>
+              <td class="duration" data-value="1663033">0.002</td>
+              <td class="duration" data-value="4989100">0.004</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cydeo.step_definitions.Login_StepDefinitions.user_on_the_library_login_page()</td>
+              <td>3</td>
+              <td class="duration" data-value="332533">0.000</td>
+              <td class="duration" data-value="332533">0.000</td>
+              <td class="duration" data-value="997600">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cydeo.step_definitions.Login_StepDefinitions.user_should_see_dashboard()</td>
+              <td>3</td>
+              <td class="duration" data-value="332633">0.000</td>
+              <td class="duration" data-value="332633">0.000</td>
+              <td class="duration" data-value="997900">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cydeo.step_definitions.VytrackGridStepDef.user_click_on_export_grid()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cydeo.step_definitions.VytrackGridStepDef.user_click_on_login()</td>
+              <td>1</td>
+              <td class="duration" data-value="2295848200">2.295</td>
+              <td class="duration" data-value="2295848200">2.295</td>
+              <td class="duration" data-value="2295848200">2.295</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cydeo.step_definitions.VytrackGridStepDef.user_click_on_vehicles()</td>
+              <td>1</td>
+              <td class="duration" data-value="10148412800">10.148</td>
+              <td class="duration" data-value="10148412800">10.148</td>
+              <td class="duration" data-value="10148412800">10.148</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cydeo.step_definitions.VytrackGridStepDef.user_enter_the_password()</td>
+              <td>1</td>
+              <td class="duration" data-value="115690600">0.115</td>
+              <td class="duration" data-value="115690600">0.115</td>
+              <td class="duration" data-value="115690600">0.115</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cydeo.step_definitions.VytrackGridStepDef.user_enter_the_username()</td>
+              <td>1</td>
+              <td class="duration" data-value="225063900">0.225</td>
+              <td class="duration" data-value="225063900">0.225</td>
+              <td class="duration" data-value="225063900">0.225</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cydeo.step_definitions.VytrackGridStepDef.user_on_the_vytrack_login_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="717899600">0.717</td>
+              <td class="duration" data-value="717899600">0.717</td>
+              <td class="duration" data-value="717899600">0.717</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cydeo.step_definitions.WebTableLoginStepDef.user_enters_below_credentials(java.util.Map&lt;java.lang.String, java.lang.String&gt;)</td>
+              <td>1</td>
+              <td class="duration" data-value="507213700">0.507</td>
+              <td class="duration" data-value="507213700">0.507</td>
+              <td class="duration" data-value="507213700">0.507</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cydeo.step_definitions.WebTableLoginStepDef.user_enters_password(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="114689500">0.114</td>
+              <td class="duration" data-value="114689500">0.114</td>
+              <td class="duration" data-value="114689500">0.114</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cydeo.step_definitions.WebTableLoginStepDef.user_enters_username(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="132645600">0.132</td>
+              <td class="duration" data-value="132645600">0.132</td>
+              <td class="duration" data-value="132645600">0.132</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cydeo.step_definitions.WebTableLoginStepDef.user_enters_username_password_and_login(java.lang.String,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="10060657200">10.060</td>
+              <td class="duration" data-value="10060657200">10.060</td>
+              <td class="duration" data-value="10060657200">10.060</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cydeo.step_definitions.WebTableLoginStepDef.user_is_in_web_table_login_page()</td>
+              <td>3</td>
+              <td class="duration" data-value="1349233533">1.349</td>
+              <td class="duration" data-value="1349233533">2.039</td>
+              <td class="duration" data-value="4047700600">4.047</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cydeo.step_definitions.WebTableLoginStepDef.user_should_see_url_contains_orders()</td>
+              <td>2</td>
+              <td class="duration" data-value="120031900">0.120</td>
+              <td class="duration" data-value="120031900">0.240</td>
+              <td class="duration" data-value="240063800">0.240</td>
+              <td class="failed">50.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cydeo.step_definitions.WebTableOrderStepDef.user_enters_city(java.lang.String)</td>
+              <td>12</td>
+              <td class="duration" data-value="71302450">0.071</td>
+              <td class="duration" data-value="71302450">0.111</td>
+              <td class="duration" data-value="855629400">0.855</td>
+              <td class="failed">91.67%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cydeo.step_definitions.WebTableOrderStepDef.user_enters_credit_card_number(java.lang.String)</td>
+              <td>12</td>
+              <td class="duration" data-value="82179383">0.082</td>
+              <td class="duration" data-value="82179383">0.109</td>
+              <td class="duration" data-value="986152600">0.986</td>
+              <td class="failed">91.67%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cydeo.step_definitions.WebTableOrderStepDef.user_enters_customer_name(java.lang.String)</td>
+              <td>12</td>
+              <td class="duration" data-value="85656150">0.085</td>
+              <td class="duration" data-value="85656150">0.109</td>
+              <td class="duration" data-value="1027873800">1.027</td>
+              <td class="failed">91.67%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cydeo.step_definitions.WebTableOrderStepDef.user_enters_expiry_date(java.lang.String)</td>
+              <td>12</td>
+              <td class="duration" data-value="72157583">0.072</td>
+              <td class="duration" data-value="72157583">0.097</td>
+              <td class="duration" data-value="865891000">0.865</td>
+              <td class="failed">91.67%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cydeo.step_definitions.WebTableOrderStepDef.user_enters_process_order_button()</td>
+              <td>12</td>
+              <td class="duration" data-value="65141466">0.065</td>
+              <td class="duration" data-value="65141466">0.087</td>
+              <td class="duration" data-value="781697600">0.781</td>
+              <td class="failed">91.67%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cydeo.step_definitions.WebTableOrderStepDef.user_enters_quantity(int)</td>
+              <td>12</td>
+              <td class="duration" data-value="122286950">0.122</td>
+              <td class="duration" data-value="122286950">0.152</td>
+              <td class="duration" data-value="1467443400">1.467</td>
+              <td class="failed">91.67%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cydeo.step_definitions.WebTableOrderStepDef.user_enters_state(java.lang.String)</td>
+              <td>12</td>
+              <td class="duration" data-value="74717516">0.074</td>
+              <td class="duration" data-value="74717516">0.121</td>
+              <td class="duration" data-value="896610200">0.896</td>
+              <td class="failed">91.67%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cydeo.step_definitions.WebTableOrderStepDef.user_enters_street(java.lang.String)</td>
+              <td>12</td>
+              <td class="duration" data-value="80121641">0.080</td>
+              <td class="duration" data-value="80121641">0.117</td>
+              <td class="duration" data-value="961459700">0.961</td>
+              <td class="failed">91.67%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cydeo.step_definitions.WebTableOrderStepDef.user_enters_zipcode(java.lang.String)</td>
+              <td>12</td>
+              <td class="duration" data-value="70670975">0.070</td>
+              <td class="duration" data-value="70670975">0.096</td>
+              <td class="duration" data-value="848051700">0.848</td>
+              <td class="failed">91.67%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cydeo.step_definitions.WebTableOrderStepDef.user_is_already_logged_in_and_on_order_page()</td>
+              <td>12</td>
+              <td class="duration" data-value="3035808650">3.035</td>
+              <td class="duration" data-value="3035808650">10.237</td>
+              <td class="duration" data-value="36429703800">36.429</td>
+              <td class="failed">91.67%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cydeo.step_definitions.WebTableOrderStepDef.user_selects_credit_card_type(java.lang.String)</td>
+              <td>12</td>
+              <td class="duration" data-value="109641266">0.109</td>
+              <td class="duration" data-value="109641266">0.154</td>
+              <td class="duration" data-value="1315695200">1.315</td>
+              <td class="failed">91.67%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cydeo.step_definitions.WebTableOrderStepDef.user_selects_product_type(java.lang.String)</td>
+              <td>12</td>
+              <td class="duration" data-value="137051075">0.137</td>
+              <td class="duration" data-value="137051075">0.178</td>
+              <td class="duration" data-value="1644612900">1.644</td>
+              <td class="failed">91.67%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cydeo.step_definitions.WebTableOrderStepDef.user_should_see_in_first_row_of_the_web_table(java.lang.String)</td>
+              <td>12</td>
+              <td class="duration" data-value="415858">0.000</td>
+              <td class="duration" data-value="415858">0.001</td>
+              <td class="duration" data-value="4990300">0.004</td>
+              <td class="failed">0.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>47</td>
+            <td>268</td>
+            <td class="duration">0.446</td>
+            <td class="duration">36.429</td>
+            <td class="duration">1:59.661</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

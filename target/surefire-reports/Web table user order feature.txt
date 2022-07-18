@@ -1,0 +1,40 @@
+-------------------------------------------------------------------------------
+Test set: Web table user order feature
+-------------------------------------------------------------------------------
+Tests run: 12, Failures: 0, Errors: 12, Skipped: 0, Time elapsed: 58.689 s <<< FAILURE! - in Web table user order feature
+Web table user order feature.User should be able to place order and order seen in web table  Time elapsed: 10.197 s  <<< ERROR!
+java.lang.NullPointerException
+
+Web table user order feature. #1  Time elapsed: 5.494 s  <<< ERROR!
+java.lang.NullPointerException
+
+Web table user order feature. #2  Time elapsed: 6.004 s  <<< ERROR!
+java.lang.NullPointerException
+
+Web table user order feature. #3  Time elapsed: 4.13 s  <<< ERROR!
+java.lang.NullPointerException
+
+Web table user order feature. #4  Time elapsed: 4.142 s  <<< ERROR!
+java.lang.NullPointerException
+
+Web table user order feature. #5  Time elapsed: 4.25 s  <<< ERROR!
+java.lang.NullPointerException
+
+Web table user order feature. #6  Time elapsed: 4.356 s  <<< ERROR!
+java.lang.NullPointerException
+
+Web table user order feature. #7  Time elapsed: 3.972 s  <<< ERROR!
+java.lang.NullPointerException
+
+Web table user order feature. #8  Time elapsed: 3.915 s  <<< ERROR!
+java.lang.NullPointerException
+
+Web table user order feature. #9  Time elapsed: 3.853 s  <<< ERROR!
+java.lang.NullPointerException
+
+Web table user order feature. #10  Time elapsed: 4.337 s  <<< ERROR!
+java.lang.NullPointerException
+
+Web table user order feature. #11  Time elapsed: 4.033 s  <<< ERROR!
+java.lang.NullPointerException
+
